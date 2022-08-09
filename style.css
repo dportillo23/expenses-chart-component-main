@@ -22,6 +22,10 @@ html {
     font-size: 18px;
 }
 
+p {
+    font-size: min(1rem, 4vw);
+}
+
 .template {
     z-index: -10;
     opacity: 0.1;
@@ -61,13 +65,17 @@ body {
 
 .balance__display {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: min(2rem, 6vw);
 }
 
 .chart__card {
     background-color: var(--col-pale-orange);
     color: var(--col-dark-brown);
     flex-direction: column;
+}
+
+.chart__title {
+    font-size: min(2rem, 6vw);
 }
 
 #myChart {
@@ -95,12 +103,13 @@ body {
 }
 
 .total__month--display {
-    font-size: 2.5rem;
+    font-size: min(2.5rem, 7vw)
 
 }
 
 .attribution { 
-    font-size: 11px; 
+    width: 100%;
+    font-size: min(11px, 3vw); 
     text-align: center;
     position: absolute;
     bottom: 1rem;
