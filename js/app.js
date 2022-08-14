@@ -10,8 +10,10 @@ const hoverPrimary = "hsl(10, 79%, 75%)";
 const hoverSecondary = "hsl(186, 34%, 70%)";
 
 const today = new Date().getDay() - 1;
-const backgroundColors = Array.apply(null, Array(7)).map((_, i) => i === today ? secondaryColor : primaryColor)
-const hoverColors = Array.apply(null, Array(7)).map((_, i) => i === today ? hoverSecondary : hoverPrimary)
+
+const todayFactored = today < 0 ? 6 : today;
+const backgroundColors = Array.apply(null, Array(7)).map((_, i) => i === todayFactored ? secondaryColor : primaryColor)
+const hoverColors = Array.apply(null, Array(7)).map((_, i) => i === todayFactored ? hoverSecondary : hoverPrimary)
 
 // data for the charts from JSON file
 const labels = rawData.map(day => day.day)
